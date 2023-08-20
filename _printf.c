@@ -17,12 +17,14 @@ int _printf(const char *format, ...)
 		{'c', con_char},
 		{'s', con_str},
 		{'%', con_perc},
-		{'\0', NULL}
-	};
+		{'\0', NULL}};
 	int i = 0, j = 0, chars_printed = 0;
 	va_list args;
 
 	va_start(args, format);
+	if (format == NULL)
+		return (-1);
+
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
