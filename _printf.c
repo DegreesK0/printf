@@ -17,7 +17,7 @@ int _printf(const char *format, ...)
 		{'s', con_str},
 		{'%', con_perc},
 		{' ', con_space},
-		{'\0', NULL}};
+		{'\0', con_space}};
 
 	int i = 0, j = 0, chars_printed = 0;
 	va_list args;
@@ -34,8 +34,9 @@ int _printf(const char *format, ...)
 			{ /* if (strcmp(&format[i], cons[j].spec) == 0) */
 				if (format[i] == cons[j].spec)
 				{
-					chars_printed += cons[j].func(args);
-					/* if (format[i] == '%' && format[i + 1] == '%') */ /*	i++; */
+					if (format[i] == '%' && (format[i + 1] == '\0'))
+						return (-1);
+					chars_printed += cons[j].func(args); /* if (format[i] == '%' && format[i + 1] == '%') */ /*	i++; */
 				}
 			}
 		}
