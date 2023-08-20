@@ -9,28 +9,29 @@
  */
 int main(void)
 {
+	/* char *name = "Kelvin_Cosby"; */
+	/* char ch = 'a'; */
+	/* char *name = "Kelvin/Cosby"; */
+
+	/* _printf("xyz"); */
+	/* _printf("testing"); */
+	/* _printf("hello %c", ch); */
+	/* _printf("hello %s", name); */
+	/* _printf("hello %shi", name); */
+	/* _printf("one %%"); */
+	/* _printf("two %%%", ch); */
+	/* /1* _printf("two %%% "); *1/ */
+	/* _printf("three %%%%%"); */
+	/* /1* _printf("three %%%%% "); *1/ */
+	/* _printf("two %%% sign", ch); */
+	/* _printf("number: %d", num); */
+
+
 	/* int len; */
 	/* int len2; */
 	/* unsigned int ui; */
 	/* void *addr; */
 
-	/* char *name = "Kelvin_Cosby"; */
-
-	char ch = 'a';
-	char *name = "Kelvin/Cosby";
-
-	_printf("xyz");
-	_printf("testing");
-	_printf("hello %c", ch);
-	_printf("hello %s", name);
-	_printf("hello %shi", name);
-	_printf("one %%");
-	_printf("two %%%");
-	/* _printf("two %%% "); */
-	_printf("three %%%%%");
-	/* _printf("three %%%%% "); */
-	/* _printf("two %%% sign", ch); */
-	/* _printf("number: %d", num); */
 
 
 	/* len = _printf("Let's try to printf a simple sentence.\n"); */
@@ -47,14 +48,14 @@ int main(void)
 	/* printf("Unsigned octal:[%o]\n", ui); */
 	/* _printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui); */
 	/* printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui); */
-	/* _printf("Character:[%c]\n", 'H'); */
-	/* printf("Character:[%c]\n", 'H'); */
-	/* _printf("String:[%s]\n", "I am a string !"); */
-	/* printf("String:[%s]\n", "I am a string !"); */
+	_printf("Character:[%c]\n", 'H');
+	printf("Character:[%c]\n", 'H');
+	_printf("String:[%s]\n", "I am a string !");
+	printf("String:[%s]\n", "I am a string !");
 	/* _printf("Address:[%p]\n", addr); */
 	/* printf("Address:[%p]\n", addr); */
-	/* len = _printf("Percent:[%%]\n"); */
-	/* len2 = printf("Percent:[%%]\n"); */
+	/*len = */_printf("Percent:[%%]\n");
+	/*len2 = */printf("Percent:[%%]\n");
 	/* _printf("Len:[%d]\n", len); */
 	/* printf("Len:[%d]\n", len2); */
 	/* _printf("Unknown:[%r]\n"); */

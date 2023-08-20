@@ -2,6 +2,12 @@
 #include <stdarg.h>
 #include <stdio.h>
 
+/**
+ * con_char - prints characters
+ * @args: the argument to be printed
+ *
+ * Return: number of characters printed
+ */
 
 int con_char(va_list args)
 {
@@ -13,6 +19,12 @@ int con_char(va_list args)
 	return (chars_printed);
 }
 
+/**
+ * con_str - prints a string
+ * @args: the argument to be printed
+ *
+ * Return: number of characters printed
+ */
 
 int con_str(va_list args)
 {
@@ -29,12 +41,18 @@ int con_str(va_list args)
 	return (chars_printed);
 }
 
+/**
+ * con_perc - prints percentage % character
+ * @args: the argument to be printed
+ *
+ * Return: number of characters printed
+ */
 
 int con_perc(__attribute__((unused)) va_list args)
 {
 	int chars_printed = 0;
 
-	our_putchar('e');
+	/* our_putchar('e'); */
 	/* our_putchar(va_arg(args, int)); */
 	our_putchar('%');
 	chars_printed++;

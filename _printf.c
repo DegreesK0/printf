@@ -28,20 +28,16 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
+			/* printf("<i = %d, format[i] = %c>\n", i, format[i]); */
 			i++;
-			/* if (format[i] == ' ') */
-			/* { */
-			/* 	while (format[i] == ' ') */
-			/* 		i++; */
-			/* 	our_putchar(' '); */
-			/* } */
 			for (j = 0; cons[j].spec != '\0'; j++)
 			{
 				/* if (strcmp(&format[i], cons[j].spec) == 0) */
 				if (format[i] == cons[j].spec)
 				{
 					chars_printed += cons[j].func(args);
-					printf("<i = %d, format[i] = %c>", i, format[i]);
+					/* if (format[i] == '%' && format[i + 1] == '%') */
+					/*	i++; */
 				}
 			}
 		}
@@ -52,7 +48,7 @@ int _printf(const char *format, ...)
 		}
 	}
 	va_end(args);
-	printf("\n");
-	printf("chars printed: %d\n", chars_printed);
+	/* printf("\n"); */
+	/* printf("chars printed: %d\n", chars_printed); */
 	return (chars_printed);
 }
