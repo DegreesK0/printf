@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 		{' ', con_space},
 		{'\0', con_space}};
 
-	int i = 0, j = 0, chars_printed = 0, ret_val = 0;
+	int i = 0, j = 0, chars_printed = 0;
 	va_list args;
 
 	va_start(args, format);
@@ -34,10 +34,7 @@ int _printf(const char *format, ...)
 			{ /* if (strcmp(&format[i], cons[j].spec) == 0) */
 				if (format[i] == cons[j].spec)
 				{
-					ret_val += cons[j].func(args);
-					if (ret_val == -1)
-						return (-1);
-					chars_printed += ret_val;
+					chars_printed += cons[j].func(args);
 					/* if (format[i] == '%' && format[i + 1] == '%') */ /*	i++; */
 				}
 			}
