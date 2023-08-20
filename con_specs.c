@@ -62,3 +62,17 @@ int con_perc(__attribute__((unused)) va_list args)
 
 	return (chars_printed);
 }
+
+/**
+ * con_space - prints nothing
+ * @args: the argument to be printed
+ *
+ * Return: returns error -1
+ */
+
+int con_space(__attribute__((unused)) va_list args)
+{
+	int chars_printed = -1;
+
+	return (chars_printed);
+}

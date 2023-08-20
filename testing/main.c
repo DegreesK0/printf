@@ -27,6 +27,7 @@ int main(void)
 	/* _printf("number: %d", num); */
 	_printf(NULL);
 	_printf("%s", NULL);
+	_printf("% ");
 
 	/* int len; */
 	/* int len2; */
