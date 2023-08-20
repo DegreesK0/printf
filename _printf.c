@@ -11,7 +11,6 @@
  * Return: the number of characters printed, excluding the null byte
  */
 
-
 int _printf(const char *format, ...)
 {
 	con_specs_t cons[] = {
