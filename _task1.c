@@ -1,7 +1,6 @@
 #include "main.h"
 #include <unistd.h>
 #include <stdarg.h>
-#include <string.h>
 #include <stdio.h>
 
 /**
@@ -14,35 +13,27 @@
 
 int _printf(const char *format, ...)
 {
-	con_specs_t cons[] = {
-		{'c', con_char},
-		{'s', con_str},
-		{'%', con_perc},
-		{'\0', NULL}
-	};
-	int i = 0, j = 0, chars_printed = 0;
+	int i = 0;
+	int chars_printed = 0;
+	int test;
 	va_list args;
 
 	va_start(args, format);
+
+	/* printf("First character: %c\n", format[0]); */
+	/* printf("Second character: %c\n", format[1]); */
+
+
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
 		{
 			i++;
-			/* if (format[i] == ' ') */
-			/* { */
-			/* 	while (format[i] == ' ') */
-			/* 		i++; */
-			/* 	our_putchar(' '); */
-			/* } */
-			for (j = 0; cons[j].spec != '\0'; j++)
+			if (format[i] == 'd')
 			{
-				/* if (strcmp(&format[i], cons[j].spec) == 0) */
-				if (format[i] == cons[j].spec)
-				{
-					chars_printed += cons[j].func(args);
-					printf("<i = %d, format[i] = %c>", i, format[i]);
-				}
+				test = 6;
+				/* printf("%d", test); */
+				write(1, &test, 4);
 			}
 		}
 		else
@@ -51,8 +42,10 @@ int _printf(const char *format, ...)
 			chars_printed++;
 		}
 	}
-	va_end(args);
 	printf("\n");
+	va_end(args);
+
 	printf("chars printed: %d\n", chars_printed);
+
 	return (chars_printed);
 }
