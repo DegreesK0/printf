@@ -26,6 +26,7 @@ int main(void)
 	/* _printf("two %%% sign", ch); */
 	/* _printf("number: %d", num); */
 	_printf(NULL);
+	_printf("%s", NULL);
 
 	/* int len; */
 	/* int len2; */
