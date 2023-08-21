@@ -17,6 +17,8 @@ int _printf(const char *format, ...)
 		{'s', con_str},
 		{'%', con_perc},
 		{' ', con_space},
+		{'d', con_dec},
+		{'i', con_int},
 		{'\0', con_space}};
 
 	int index = 0, chars_printed = 0, j = 0;
