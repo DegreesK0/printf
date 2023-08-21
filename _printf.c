@@ -12,35 +12,36 @@
 
 int _printf(const char *format, ...)
 {
-	con_specs_t cons[] = {
-		{'c', con_char},
-		{'s', con_str},
-		{'%', con_perc},
-		{' ', con_space},
-		{'\0', con_space}};
+	/* con_specs_t cons[] = { */
+	/*	{'c', con_char}, */
+	/*	{'s', con_str}, */
+	/*	{'%', con_perc}, */
+	/*	{' ', con_space}, */
+	/*	{'\0', con_space}}; */
 
-	int i = 0, j = 0, chars_printed = 0;
+	int index = 0, chars_printed = 0;
 	va_list args;
 
 	va_start(args, format);
 	if (format == NULL)
 		return (-1);
-	for (i = 0; format[i] != '\0'; i++)
+	for (index = 0; format[index] != '\0'; index++)
 	{
-		if (format[i] == '%')
+		if (format[index] == '%')
 		{
-			i++;
-			for (j = 0; cons[j].spec != '\0'; j++)
-			{
-				if (format[i] == cons[j].spec)
-				{
-					chars_printed += cons[j].func(args);
-				}
-			}
+			index++;
+			select_con_spec(format, index, args);
+			/* for (j = 0; cons[j].spec != '\0'; j++) */
+			/* { */
+			/*	if (format[index] == cons[j].spec) */
+			/*	{ */
+			/*		chars_printed += cons[j].func(args); */
+			/*	} */
+			/* } */
 		}
 		else
 		{
-			write(1, &format[i], 1);
+			write(1, &format[index], 1);
 			chars_printed++;
 		}
 	}
