@@ -25,6 +25,6 @@ int con_int(va_list args);
 
 int _printf(const char *format, ...);
 int our_putchar(char c);
-/* int select_con_spec(const char *format, int index, va_list args); */
+int select_con_spec(const char *format, int index, va_list args);
 
 #endif
