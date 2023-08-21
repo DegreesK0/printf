@@ -20,6 +20,8 @@ int con_char(va_list args);
 int con_str(va_list args);
 int con_perc(va_list args);
 int con_space(va_list args);
+int con_dec(va_list args);
+int con_int(va_list args);
 
 int _printf(const char *format, ...);
 int our_putchar(char c);
