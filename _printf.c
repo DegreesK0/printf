@@ -13,9 +13,11 @@
 int _printf(const char *format, ...)
 {
 	con_specs_t cons[] = {
-		{'c', con_char},
-		{'s', con_str},
-		{'%', con_perc}, {' ', con_space}, {'\0', con_space}};
+		{'c', con_char}, {'s', con_str}, {'%', con_perc}, {' ', con_space},
+		{'d', con_space}, {'i', con_space}, {'b', con_space}, {'u', con_space},
+		{'o', con_space}, {'x', con_space}, {'X', con_space}, {'S', con_space},
+		{'p', con_space}, {'r', con_space}, {'R', con_space},
+		{'\0', con_space}};
 	int i = 0, j = 0, chars_printed = 0, temp = 0;
 	va_list args;
 
