@@ -22,10 +22,10 @@ int _printf(const char *format, ...)
 	int i = 0, j = 0, chars_printed = 0;
 	va_list args;
 
-	va_start(args, format);
 	if (format == NULL)
 		return (-1);
-	for (i = 0; format[i] != '\0'; i++)
+	va_start(args, format);
+	for (i = 0; format && format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
 		{ /* printf("<i = %d, format[i] = %c>\n", i, format[i]); */
