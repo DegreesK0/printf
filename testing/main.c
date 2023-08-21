@@ -9,53 +9,94 @@
  */
 int main(void)
 {
-	char ch = 'a';
-	char *name = "kelvin/cosby";
+	/* char ch = 'a'; */
+	/* char *name = "kelvin/cosby"; */
 
-	printf(NULL);
-	_printf(NULL);
-	printf("%s", NULL);
-	_printf("%s", NULL);
-	printf("% ");
-	_printf("% ");
+	/* printf(NULL); */
+	/* _printf(NULL); */
+	/* printf("%s", NULL); */
+	/* _printf("%s", NULL); */
+	/* printf("% "); */
+	/* _printf("% "); */
 
-	printf("xyz\n");
-	_printf("xyz\n");
+	/* printf("xyz\n"); */
+	/* _printf("xyz\n"); */
 
-	printf("Character:[%c]\n", 'H');
-	_printf("Character:[%c]\n", 'H');
-	printf("hello %c\n", ch);
-	_printf("hello %c\n", ch);
+	/* printf("Character:[%c]\n", 'H'); */
+	/* _printf("Character:[%c]\n", 'H'); */
+	/* printf("hello %c\n", ch); */
+	/* _printf("hello %c\n", ch); */
 
-	printf("String:[%s]\n", "I am a string !");
-	_printf("String:[%s]\n", "I am a string !");
-	printf("hello %s\n", name);
-	_printf("hello %s\n", name);
-	printf("hello %shi\n", name);
-	_printf("hello %shi\n", name);
+	/* printf("String:[%s]\n", "I am a string !"); */
+	/* _printf("String:[%s]\n", "I am a string !"); */
+	/* printf("hello %s\n", name); */
+	/* _printf("hello %s\n", name); */
+	/* printf("hello %shi\n", name); */
+	/* _printf("hello %shi\n", name); */
 
-	printf("Unknown:[%r]\n");
-	_printf("Unknown:[%r]\n");
-	printf("zero %\n");
-	_printf("zero %\n");
-	printf("one %%\n");
-	_printf("one %%\n");
-	printf("two %%%\n");
-	_printf("two %%%\n");
-	printf("three %%%%%\n");
-	_printf("three %%%%%\n");
+	/* printf("Unknown:[%r]\n"); */
+	/* _printf("Unknown:[%r]\n"); */
+	/* printf("zero %\n"); */
+	/* _printf("zero %\n"); */
+	/* printf("one %%\n"); */
+	/* _printf("one %%\n"); */
+	/* printf("two %%%\n"); */
+	/* _printf("two %%%\n"); */
+	/* printf("three %%%%%\n"); */
+	/* _printf("three %%%%%\n"); */
 
-	/* _printf("two %%% sign", ch); */
-	/* _printf("number: %d", num); */
-	/* _printf("two %%%", ch); */
+	/* /1* _printf("two %%% sign", ch); *1/ */
+	/* /1* _printf("number: %d", num); *1/ */
+	/* /1* _printf("two %%%", ch); *1/ */
 
-	/* printf("%d\n", printf("Hello")); */
-	/* _printf("%d\n", printf("Hello")); */
+	/* /1* printf("%d\n", printf("Hello")); *1/ */
+	/* /1* _printf("%d\n", printf("Hello")); *1/ */
 
 
 
-	/* _printf(""); */
-	/* printf(""); */
+	/* /1* _printf(""); *1/ */
+	/* /1* printf(""); *1/ */
+
+/*******************************************************************************************/
+/*** Task 0 test case ***/
+	int len = 0;
+	int len2 = 0;
+
+	/* len = _printf("A %s sentence\n", "simple"); */
+	/* len2 = printf("A %s sentence\n", "simple"); */
+	/* printf("Len:[%d]\n", len); */
+	/* printf("Len1:[%d]\n\n", len2); */
+
+	/* len = _printf("A %c%c%s sentence\n", 's', 'i', "mple"); */
+	/* len2 = printf("A %c%c%s sentence\n", 's', 'i', "mple"); */
+	/* printf("Len:[%d]\n", len); */
+	/* printf("Len1:[%d]\n\n", len2); */
+
+	len = _printf("A simple %v entence\n");
+	len2 = printf("A simple %v entence\n");
+	printf("Len:[%d]\n", len);
+	printf("Len1:[%d]\n\n", len2);
+
+	/* len = _printf("Percentage: %%\n"); */
+	/* len2 = printf("Percentage: %%\n"); */
+	/* printf("Len:[%d]\n", len); */
+	/* printf("Len1:[%d]\n\n", len2); */
+
+	/* len = _printf("NULL: %c, %s\n", NULL, NULL); */
+	/* len2 = printf("NULL: %c, %s\n", NULL, NULL); */
+	/* printf("Len:[%d]\n", len); */
+	/* printf("Len1:[%d]\n\n", len2); */
+
+	len = _printf("%");
+	len2 = printf("%");
+	printf("Len:[%d]\n", len);
+	printf("Len1:[%d]\n\n", len2);
+
+	len = _printf("A simple sentence%");
+	len2 = printf("\nA simple sentence%");
+	printf("\nLen:[%d]\n", len);
+	printf("Len1:[%d]\n\n", len2);
+
 
 
 
