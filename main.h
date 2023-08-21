@@ -2,6 +2,13 @@
 #define MAIN_H
 #include <stdarg.h>
 
+
+/**
+ * struct con_specs - Struct of conversion specifiers
+ * @spec: The specifier
+ * @func: The function or conversion associated with
+ */
+
 typedef struct con_specs
 {
 	char spec;
