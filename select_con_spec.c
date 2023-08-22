@@ -21,6 +21,8 @@ int select_con_spec(const char *format, int index, va_list args)
 		{'s', con_str},
 		{'%', con_perc},
 		{' ', con_space},
+		{'d', con_dec},
+		{'i', con_int},
 		{'\0', con_space}
 	};
 	int j = 0, chars_printed = 0;
