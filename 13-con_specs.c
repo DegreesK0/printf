@@ -11,22 +11,22 @@
 
 int con_rev(va_list args)
 {
-    int chars_printed = 0;
+	int chars_printed = 0;
 
-    int len = 0;
-    char *str = va_arg(args, char *);
+	int len = 0;
+	char *str = va_arg(args, char *);
 
-    if (str == NULL)
-        str = "(null)";
+	if (str == NULL)
+		str = "(null)";
 
-    while (str[len])
-        len++;
+	while (str[len])
+		len++;
 
-    for (len = len - 1; len >= 0; len--)
-    {
-        our_putchar(str[len]);
-        chars_printed++;
-    }
+	for (len = len - 1; len >= 0; len--)
+	{
+		our_putchar(str[len]);
+		chars_printed++;
+	}
 
-    return (chars_printed);
+	return (chars_printed);
 }

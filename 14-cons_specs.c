@@ -12,7 +12,6 @@
 int con_rot13(va_list args)
 {
     int chars_printed = 0;
-
     int i = 0;
     int j = 0;
     char *str = va_arg(args, char *);
