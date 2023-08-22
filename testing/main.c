@@ -61,6 +61,7 @@ int main(void)
 /*** Task 0 test case ***/
 	/* int len = 0; */
 	/* int len2 = 0; */
+	/* char *str = "test"; */
 
 	/* len = _printf("A %s sentence\n", "simple"); */
 	/* len2 = printf("A %s sentence\n", "simple"); */
@@ -97,6 +98,22 @@ int main(void)
 	/* printf("\nLen:[%d]\n", len); */
 	/* printf("Len1:[%d]\n\n", len2); */
 
+	/* len = _printf("% "); */
+	/* len2 = printf("% "); */
+	/* printf("\nLen:[%d]\n", len); */
+	/* printf("Len1:[%d]\n\n", len2); */
+
+	/* len = _printf("% s\n", str); */
+	/* len2 = printf("% s\n", str); */
+	/* printf("Len:[%d]\n", len); */
+	/* printf("Len1:[%d]\n\n", len2); */
+
+	/* len = _printf("\\\n"); */
+	/* len2 = printf("\\\n"); */
+	/* printf("Len:[%d]\n", len); */
+	/* printf("Len1:[%d]\n\n", len2); */
+
+
 /*******************************************************************************************/
 /*** Task 1 test case ***/
 	int len = 0;
@@ -132,12 +149,15 @@ int main(void)
 	printf("Len:[%d]\n", len);
 	printf("Len1:[%d]\n\n", len2);
 
+	len = _printf("%d\n", INT_MIN);
+	len2 = printf("%d\n", INT_MIN);
+	printf("Len:[%d]\n", len);
+	printf("Len1:[%d]\n\n", len2);
+
 	len = _printf("%i\n", INT_MIN);
 	len2 = printf("%i\n", INT_MIN);
 	printf("Len:[%d]\n", len);
 	printf("Len1:[%d]\n\n", len2);
-
-	return (0);
 
 
 

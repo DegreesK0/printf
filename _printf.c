@@ -12,7 +12,7 @@
 
 int _printf(const char *format, ...)
 {
-	int index = 0, chars_printed = 0;
+	int index = 0, chars_printed = 0, ret_val = 0;
 	va_list args;
 
 	va_start(args, format);
@@ -23,9 +23,14 @@ int _printf(const char *format, ...)
 		if (format[index] == '%')
 		{
 			index++;
+			while (format[index] == ' ')
+				index++;
 			if (format[index] == '\0')
 				return (-1);
-			chars_printed += select_con_spec(format, index, args);
+			ret_val = select_con_spec(format, index, args);
+			if (ret_val == -1)
+				return (-1);
+			chars_printed += ret_val;
 		}
 		else
 		{

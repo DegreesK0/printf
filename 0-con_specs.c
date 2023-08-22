@@ -64,13 +64,13 @@ int con_perc(__attribute__((unused)) va_list args)
 }
 
 /**
- * con_space - prints nothing
- * @args: the argument to be printed
+ * con_error - returns an error. Exists in case we need to return erros
+ * @args: the argument to be printed. Is not used
  *
  * Return: returns error -1
  */
 
-int con_space(__attribute__((unused)) va_list args)
+int con_error(__attribute__((unused)) va_list args)
 {
 	int chars_printed = -1;
 

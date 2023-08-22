@@ -20,10 +20,10 @@ int select_con_spec(const char *format, int index, va_list args)
 		{'c', con_char},
 		{'s', con_str},
 		{'%', con_perc},
-		{' ', con_space},
+		/* {' ', con_space}, */
 		{'d', con_dec},
 		{'i', con_int},
-		{'\0', con_space}
+		{'\0', NULL}
 	};
 	int j = 0, chars_printed = 0;
 
@@ -32,8 +32,13 @@ int select_con_spec(const char *format, int index, va_list args)
 		if (format[index] == cons[j].spec)
 		{
 			chars_printed += cons[j].func(args);
+			return (chars_printed);
 		}
 	}
+	our_putchar('%');
+	chars_printed++;
+	our_putchar(format[index]);
+	chars_printed++;
 
 	return (chars_printed);
 }
