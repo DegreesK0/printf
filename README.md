@@ -73,9 +73,8 @@ Protype: `int _printf(const char *format, ...);`
     - [ ] R: prints the rot13'ed string
 
 ### Task 15
+All the above options work well together.
 	
-
-
 [....]
 
 # Setting up the struct
