@@ -13,7 +13,6 @@
  * Return: returns the total characters printed
  */
 
-
 int select_con_spec(const char *format, int index, va_list args)
 {
 	con_specs_t cons[] = {
@@ -23,8 +22,8 @@ int select_con_spec(const char *format, int index, va_list args)
 		/* {' ', con_space}, */
 		{'d', con_dec},
 		{'i', con_int},
-		{'\0', NULL}
-	};
+		{'R', con_rot13},
+		{'\0', NULL}};
 	int j = 0, chars_printed = 0;
 
 	for (j = 0; cons[j].spec != '\0'; j++)
