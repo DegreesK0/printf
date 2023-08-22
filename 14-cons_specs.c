@@ -11,29 +11,28 @@
 
 int con_rot13(va_list args)
 {
-    int chars_printed = 0;
-    int i = 0;
-    int j = 0;
-    char *str = va_arg(args, char *);
+	int chars_printed = 0;
+	int i = 0;
+	int j = 0;
+	char *str = va_arg(args, char *);
 
-    char *src = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    char *code = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	char *src = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char *code = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-    if (str == NULL)
-        str = "(null)";
+	if (str == NULL)
+		str = "(null)";
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		for (j = 0; src[j] != '\0'; j++)
+		{
+			if (str[i] == src[j])
+			{
+				our_putchar(code[j]);
+				chars_printed++;
+				break;
+			}
+		}
+	}
 
-    for (i = 0; str[i] != '\0'; i++)
-    {
-        for (j = 0; src[j] != '\0'; j++)
-        {
-            if (str[i] == src[j])
-            {
-                our_putchar(code[j]);
-                chars_printed++;
-                break;
-            }
-        }
-    }
-
-    return (chars_printed);
+	return (chars_printed);
 }
