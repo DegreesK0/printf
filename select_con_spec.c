@@ -23,6 +23,7 @@ int select_con_spec(const char *format, int index, va_list args)
 		{'d', con_dec},
 		{'i', con_int},
 		{'R', con_rot13},
+		{'r', con_rev},
 		{'\0', NULL}};
 	int j = 0, chars_printed = 0;
 
