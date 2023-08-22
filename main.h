@@ -22,6 +22,7 @@ int con_error(va_list args);
 int con_dec(va_list args);
 int con_int(va_list args);
 int con_rot13(va_list args);
+int con_rev(va_list args);
 
 int _printf(const char *format, ...);
 int our_putchar(char c);
