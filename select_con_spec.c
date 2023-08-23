@@ -22,9 +22,11 @@ int select_con_spec(const char *format, int index, va_list args)
 		/* {' ', con_space}, */
 		{'d', con_dec},
 		{'i', con_int},
+		{'b', con_bi},
 		{'R', con_rot13},
 		{'r', con_rev},
 		{'\0', NULL}};
+
 	int j = 0, chars_printed = 0;
 
 	for (j = 0; cons[j].spec != '\0'; j++)

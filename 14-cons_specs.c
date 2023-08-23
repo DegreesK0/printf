@@ -21,17 +21,18 @@ int con_rot13(va_list args)
 
 	if (str == NULL)
 		str = "(null)";
+
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		for (j = 0; src[j] != '\0'; j++)
+	for (j = 0; src[j] != '\0'; j++)
+	{
+		if (str[i] == src[j])
 		{
-			if (str[i] == src[j])
-			{
-				our_putchar(code[j]);
-				chars_printed++;
-				break;
-			}
+			our_putchar(code[j]);
+			chars_printed++;
+			break;
 		}
+	}
 	}
 
 	return (chars_printed);
